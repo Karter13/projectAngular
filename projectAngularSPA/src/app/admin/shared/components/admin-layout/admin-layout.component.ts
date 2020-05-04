@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-admin-layout',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./admin-layout.component.sass']
 })
 export class AdminLayoutComponent implements OnInit {
+  collapsed: any = 'false'
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
+  logOut(event: Event) {
+    event.preventDefault();
+    this.router.navigate(['/admin', 'login']);
+  }
 }
