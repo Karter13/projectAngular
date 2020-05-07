@@ -6,6 +6,7 @@ import { DashboardPageComponent } from './dashboard-page/dashboard-page.componen
 import { CreatePageComponent } from './create-page/create-page.component';
 import { EditPageComponent } from './edit-page/edit-page.component';
 import {AdminRoutingModule} from "./admin-routing.module";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -17,6 +18,8 @@ import {AdminRoutingModule} from "./admin-routing.module";
   ],
   imports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     AdminRoutingModule,
   ],
 })
