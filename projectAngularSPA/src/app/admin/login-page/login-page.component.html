@@ -30,7 +30,7 @@
                class="validation">
             <small *ngIf="password.errors.required">Введите пароль</small>
             <small *ngIf="password.errors.minlength">
-              Пароль должен быть не менее {{password.errors.minlength.requiredLength}} символов.
+              Пароль должен быть не менее {{password.errors.minlength.requiredLength}} символов!
               Введено {{password.errors.minlength.actualLength}}.
             </small>
           </div>
