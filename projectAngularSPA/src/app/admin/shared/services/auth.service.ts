@@ -37,7 +37,7 @@ export class AuthService {
     return !!this.token;
   }
 
-  static setToken(response: FbAuthResponse | null)  {
+  private setToken(response: FbAuthResponse | null)  {
     console.log(response);
     if(response) {
       const expDate = new Date(new Date().getTime() + +response.expiresIn * 1000);
