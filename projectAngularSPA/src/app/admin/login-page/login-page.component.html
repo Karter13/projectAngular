@@ -36,7 +36,10 @@
           </div>
         </div>
 
-        <button type="submit" [disabled]="form.invalid" class="btn btn-primary">Войти</button>
+        <button type="submit"
+                [disabled]="form.invalid || submitted"
+                class="btn btn-primary"
+        >Войти</button>
 
       </form>
     </div>
