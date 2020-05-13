@@ -43,7 +43,7 @@ export class LoginPageComponent implements OnInit {
 
   submit() {
     if (this.form.invalid) {
-      return
+      return false;
     }
 
     this.submitted = true;
