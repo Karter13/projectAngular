@@ -46,13 +46,13 @@ export class AuthService {
     console.log(message);
     switch (message) {
       case 'INVALID_EMAIL':
-        this.error$.next('Email указан не верно!')
+        this.error$.next('Email указан не верно!');
         break;
       case 'INVALID_PASSWORD':
-        this.error$.next('Не верный пароль!')
+        this.error$.next('Не верный пароль!');
         break;
       case 'EMAIL_NOT_FOUND':
-        this.error$.next('Такого Email не существует!')
+        this.error$.next('Такого Email не существует!');
         break;
     }
 

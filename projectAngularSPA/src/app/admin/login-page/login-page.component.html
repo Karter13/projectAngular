@@ -8,6 +8,10 @@
           {{ error }}
         </div>
 
+        <div class="alert alert-info" *ngIf="message">
+          {{ message }}
+        </div>
+
         <div [ngClass]="{invalid: email.touched && email.invalid}"
              class="form-group">
           <label for="email">Email</label>
