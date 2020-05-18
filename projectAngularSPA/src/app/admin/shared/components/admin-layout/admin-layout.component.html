@@ -14,7 +14,7 @@
        id="navbarText"
        [ngClass]="{'show': collapsed}"
   >
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav mr-auto" *ngIf="authService.isAuthenticated()">
       <li class="nav-item" routerLinkActive="active">
         <a class="nav-link" [routerLink]="['/admin', 'dashboard']">Главная</a>
       </li>
@@ -26,8 +26,8 @@
       </li>
     </ul>
 
-    <span class="navbar-text">
-      Моя Админка
+    <span class="navbar-text" *ngIf="authService.isAuthenticated()">
+      Добавление нового блогера
     </span>
   </div>
 </nav>
