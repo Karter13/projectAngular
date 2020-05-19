@@ -1,1 +1,53 @@
-<p>create-page works!</p>
+<div class="container">
+  <div class="card">
+    <div class="card-body">
+      <form [formGroup]="form" (ngSubmit)="submit()">
+        <h1>Создание нового поста</h1>
+
+        <div [ngClass]="{invalid: title.touched && title.invalid}"
+             class="form-group">
+          <label for="title">Название поста</label>
+          <input type="text"
+                 class="form-control"
+                 id="title"
+                 formControlName="title"
+          >
+          <div *ngIf="title.touched && title.invalid"
+               class="validation">
+            <small *ngIf="title.errors.required">
+              Введите название поста
+            </small>
+          </div>
+        </div>
+
+        <div>
+          <textarea cols="50">Заглушка Здесь будет Контент поста, буду использовать ngx-quill </textarea>
+
+        </div>
+
+
+        <div [ngClass]="{invalid: author.touched && author.invalid}"
+             class="form-group">
+          <label for="author">Автор поста</label>
+          <input type="text"
+                 class="form-control"
+                 id="author"
+                 formControlName="author"
+          >
+          <div *ngIf="author.touched && author.invalid"
+               class="validation">
+            <small *ngIf="author.errors.required">
+              Введите автора поста
+            </small>
+          </div>
+        </div>
+
+        <button type="submit"
+                [disabled]="form.invalid"
+                class="btn btn-primary btn-block"
+        >Создать пост</button>
+
+      </form>
+    </div>
+  </div>
+</div>

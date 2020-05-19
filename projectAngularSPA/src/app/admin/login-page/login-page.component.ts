@@ -24,7 +24,9 @@ export class LoginPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.queryParams.subscribe((params: Params) => {
-      this.message = 'Для входа введите данные!'
+      if (params['loginAgain']) {
+      this.message = 'Для входа введите данные!';
+      }
     });
 
     this.form = new FormGroup({
