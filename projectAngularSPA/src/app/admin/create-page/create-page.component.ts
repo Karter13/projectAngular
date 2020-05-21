@@ -29,6 +29,10 @@ export class CreatePageComponent implements OnInit {
     return this.form.get('author');
   }
 
+  get text() {
+    return this.form.get('text');
+  }
+
   submit() {
     if(this.form.invalid) {
       return false;
@@ -40,5 +44,7 @@ export class CreatePageComponent implements OnInit {
       text: this.form.value.text,
       date: new Date(),
     }
+
+    console.log(post);
   }
 }

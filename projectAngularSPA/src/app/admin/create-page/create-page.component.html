@@ -15,13 +15,21 @@
           <div *ngIf="title.touched && title.invalid"
                class="validation">
             <small *ngIf="title.errors.required">
-              Введите название поста
+              Введите название поста!
             </small>
           </div>
         </div>
 
-        <div>
-          <textarea cols="50">Заглушка Здесь будет Контент поста, буду использовать ngx-quill </textarea>
+        <div [ngClass]="{invalid: text.touched && text.invalid}"
+             class="form-group" >
+          <label>Контент поста:</label>
+          <quill-editor formControlName="text"></quill-editor>
+          <div *ngIf="text.touched && text.invalid"
+               class="validation">
+            <small *ngIf="text.errors.required">
+              Введите текст поста!
+            </small>
+          </div>
 
         </div>
 
@@ -37,7 +45,7 @@
           <div *ngIf="author.touched && author.invalid"
                class="validation">
             <small *ngIf="author.errors.required">
-              Введите автора поста
+              Введите автора поста!
             </small>
           </div>
         </div>
