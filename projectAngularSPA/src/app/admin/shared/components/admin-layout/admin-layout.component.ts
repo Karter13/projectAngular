@@ -8,10 +8,10 @@ import {AuthService} from "../../services/auth.service";
   styleUrls: ['./admin-layout.component.sass']
 })
 export class AdminLayoutComponent implements OnInit {
-  collapsed: any = `false`;
+  collapsed: any = false;
 
   constructor(private router: Router,
-              private authService: AuthService
+              public authService: AuthService
               ) { }
 
   ngOnInit(): void {

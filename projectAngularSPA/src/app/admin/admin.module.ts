@@ -10,6 +10,7 @@ import { EditPageComponent } from './edit-page/edit-page.component';
 import {AdminRoutingModule} from "./admin-routing.module";
 import {AuthService} from "./shared/services/auth.service";
 import {SharedModule} from "../shared/shared.module";
+import {AuthGuard} from "./shared/services/auth.guard";
 
 @NgModule({
   declarations: [
@@ -26,6 +27,9 @@ import {SharedModule} from "../shared/shared.module";
     AdminRoutingModule,
     SharedModule,
   ],
-  providers: [AuthService]
+  providers: [
+    AuthService,
+    AuthGuard
+  ]
 })
 export class AdminModule {}
