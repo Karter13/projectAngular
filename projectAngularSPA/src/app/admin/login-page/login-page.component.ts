@@ -26,6 +26,8 @@ export class LoginPageComponent implements OnInit {
     this.route.queryParams.subscribe((params: Params) => {
       if (params['loginAgain']) {
       this.message = 'Для входа введите данные!';
+      } else if (params['authFailed']) {
+        this.message = 'Время сессии истекло. Авторизуйтесь заново!';
       }
     });
 
