@@ -1,12 +1,12 @@
 <div class="card">
   <div class="card-header">
-    <h2>Заголовок поста</h2>
-    <small>30.04.2020</small>
+    <h2>{{post.title}}</h2>
+    <small>{{post.date | date: 'dd.MM.yyyy'}}</small>
   </div>
   <div class="card-body">
-    <small class="card-title">Михаил Карамзин</small>
+    <small class="card-title">{{post.author}}</small>
   </div>
-    <a [routerLink]="['/post', 111]"
+    <a [routerLink]="['/post', post.id]"
       class="btn btn-primary"
     >Открыть пост</a>
 </div>
