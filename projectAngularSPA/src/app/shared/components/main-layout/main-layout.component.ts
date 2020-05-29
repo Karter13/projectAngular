@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-main-layout',
@@ -7,9 +8,12 @@ import { Component, OnInit } from "@angular/core";
 })
 export class MainLayoutComponent implements OnInit {
 
-  constructor() { }
+  constructor(public router: Router) { }
 
   ngOnInit(): void {
   }
 
+  connectAd() {
+    this.router.navigate(['/admin', 'dashboard']);
+  }
 }
