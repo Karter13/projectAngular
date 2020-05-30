@@ -1,11 +1,11 @@
-import {Component, OnDestroy, OnInit} from "@angular/core";
-import {ActivatedRoute, Params} from "@angular/router";
-import {PostsService} from "../../shared/posts.service";
-import {switchMap} from "rxjs/operators";
-import {Post} from "../../shared/interfaces";
-import {FormControl, FormGroup, Validators} from "@angular/forms";
-import {Subscription} from "rxjs";
-import {AlertService} from "../shared/services/alert.service";
+import {Component, OnDestroy, OnInit} from '@angular/core';
+import {ActivatedRoute, Params} from '@angular/router';
+import {PostsService} from '../../shared/posts.service';
+import {switchMap} from 'rxjs/operators';
+import {Post} from '../../shared/interfaces';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {Subscription} from 'rxjs';
+import {AlertService} from '../shared/services/alert.service';
 
 @Component({
   selector: 'app-edit-page',
