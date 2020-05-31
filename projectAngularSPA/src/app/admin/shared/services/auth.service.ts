@@ -1,10 +1,10 @@
-import {Injectable} from "@angular/core";
-import {HttpClient, HttpErrorResponse} from "@angular/common/http";
-import {Observable, Subject, throwError} from "rxjs";
-import {catchError, tap} from "rxjs/operators";
+import {Injectable} from '@angular/core';
+import {HttpClient, HttpErrorResponse} from '@angular/common/http';
+import {Observable, Subject, throwError} from 'rxjs';
+import {catchError, tap} from 'rxjs/operators';
 
-import {FbAuthResponse, User} from "../../../shared/interfaces";
-import {environment} from "../../../../environments/environment";
+import {FbAuthResponse, User} from '../../../shared/interfaces';
+import {environment} from '../../../../environments/environment';
 
 
 
