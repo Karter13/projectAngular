@@ -14,6 +14,8 @@ import { PostComponent } from './shared/components/post/post.component';
 import {SharedModule} from './shared/shared.module';
 import {AuthInterceptor} from './shared/auth.interceptor';
 import {PostPageComponent} from "./post-page/post-page.component";
+import { CommentsPageComponent } from './post-page/comments-page/comments-page.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 registerLocaleData(ruLocaleData, 'ru');
 
@@ -23,13 +25,15 @@ registerLocaleData(ruLocaleData, 'ru');
     MainLayoutComponent,
     HomePageComponent,
     PostPageComponent,
-    PostComponent
+    PostComponent,
+    CommentsPageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,
+    ReactiveFormsModule,
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, multi: true, useClass: AuthInterceptor},
