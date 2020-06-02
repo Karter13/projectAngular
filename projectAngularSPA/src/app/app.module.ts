@@ -13,9 +13,9 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { PostComponent } from './shared/components/post/post.component';
 import {SharedModule} from './shared/shared.module';
 import {AuthInterceptor} from './shared/auth.interceptor';
-import {PostPageComponent} from "./post-page/post-page.component";
+import {PostPageComponent} from './post-page/post-page.component';
 import { CommentsPageComponent } from './post-page/comments-page/comments-page.component';
-import {ReactiveFormsModule} from "@angular/forms";
+import {ReactiveFormsModule} from '@angular/forms';
 
 registerLocaleData(ruLocaleData, 'ru');
 

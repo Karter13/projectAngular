@@ -1,9 +1,9 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {FormControl, FormGroup, Validators} from "@angular/forms";
-import {ActivatedRoute} from "@angular/router";
-import {CommentPost} from "../../shared/interfaces";
-import {Subscription} from "rxjs";
-import {CommentsService} from "../../shared/comments.service";
+import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {ActivatedRoute} from '@angular/router';
+import {CommentPost} from '../../shared/interfaces';
+import {Subscription} from 'rxjs';
+import {CommentsService} from '../../shared/comments.service';
 
 @Component({
   selector: 'app-comments-page',
