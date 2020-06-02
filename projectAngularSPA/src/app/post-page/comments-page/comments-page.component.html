@@ -37,7 +37,7 @@
 
 
         <button type="submit"
-                [disabled]="form.invalid"
+                [disabled]="form.invalid || submitted"
                 class="btn btn-primary"
         >Опубликовать коментарий</button>
 

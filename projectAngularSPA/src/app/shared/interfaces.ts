@@ -20,3 +20,10 @@ export interface Post {
 export interface FbCreateResponse {
   name: string;
 }
+
+export interface CommentPost {
+  id: string,
+  name: string,
+  text: string,
+  date: Date,
+}
