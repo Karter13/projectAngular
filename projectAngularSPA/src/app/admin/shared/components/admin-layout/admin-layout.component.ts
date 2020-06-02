@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
+
 import {AuthService} from '../../services/auth.service';
 
 @Component({
@@ -10,9 +11,10 @@ import {AuthService} from '../../services/auth.service';
 export class AdminLayoutComponent implements OnInit {
   collapsed: any = false;
 
-  constructor(private router: Router,
-              public authService: AuthService
-              ) { }
+  constructor(
+    private router: Router,
+    public authService: AuthService
+  ) { }
 
   ngOnInit(): void {
   }

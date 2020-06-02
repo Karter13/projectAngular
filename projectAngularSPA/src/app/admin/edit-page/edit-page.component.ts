@@ -1,10 +1,11 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {ActivatedRoute, Params} from '@angular/router';
-import {PostsService} from '../../shared/posts.service';
-import {switchMap} from 'rxjs/operators';
-import {Post} from '../../shared/interfaces';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {Subscription} from 'rxjs';
+import {switchMap} from 'rxjs/operators';
+
+import {PostsService} from '../../shared/posts.service';
+import {Post} from '../../shared/interfaces';
 import {AlertService} from '../shared/services/alert.service';
 
 @Component({
@@ -18,7 +19,6 @@ export class EditPageComponent implements OnInit, OnDestroy {
   post: Post;
   submitted = false;
   updateSubscription: Subscription;
-
 
   constructor(
     private route: ActivatedRoute,
