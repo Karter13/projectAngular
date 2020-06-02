@@ -51,7 +51,7 @@ export class EditPageComponent implements OnInit, OnDestroy {
 
   submit() {
     if (this.form.invalid) {
-      return;
+      return false;
     }
 
     this.submitted = true;
