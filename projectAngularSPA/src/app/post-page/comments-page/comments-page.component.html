@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-sm-12 col-md-9">
+  <div class="col-sm-12">
       <h3>Прокоментировать</h3>
       <form [formGroup]="form" (ngSubmit)="submit()">
 
@@ -43,5 +43,19 @@
 
       </form>
   </div>
+
+  <div class="col-sm-12">
+    <h3>Коментарии</h3>
+  </div>
+
+  <div class="card w-100" *ngFor="let comment of comments">
+
+    <div class="card-body">
+      <h5>{{comment.name}}</h5>
+      <p class="card-text">{{comment.date | date: 'medium':null:'ru' }}</p>
+      <p class="card-text">{{comment.text}}</p>
+    </div>
+  </div>
+
 </div>
 
