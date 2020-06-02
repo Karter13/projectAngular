@@ -4,7 +4,7 @@ import {HTTP_INTERCEPTORS} from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {registerLocaleData} from '@angular/common';
 import ruLocaleData from '@angular/common/locales/ru';
-
+import {ReactiveFormsModule} from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,7 +15,6 @@ import {SharedModule} from './shared/shared.module';
 import {AuthInterceptor} from './shared/auth.interceptor';
 import {PostPageComponent} from './post-page/post-page.component';
 import { CommentsPageComponent } from './post-page/comments-page/comments-page.component';
-import {ReactiveFormsModule} from '@angular/forms';
 
 registerLocaleData(ruLocaleData, 'ru');
 

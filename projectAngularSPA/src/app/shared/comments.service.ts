@@ -1,9 +1,10 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {CommentPost, FbCreateResponse} from './interfaces';
 import {Observable} from 'rxjs';
-import {environment} from '../../environments/environment';
 import {map} from 'rxjs/operators';
+
+import {CommentPost} from './interfaces';
+import {environment} from '../../environments/environment';
 
 @Injectable({
   providedIn: "root"

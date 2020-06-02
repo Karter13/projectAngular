@@ -6,8 +6,6 @@ import {catchError, tap} from 'rxjs/operators';
 import {FbAuthResponse, User} from '../../../shared/interfaces';
 import {environment} from '../../../../environments/environment';
 
-
-
 @Injectable({
   providedIn: "root",
 })

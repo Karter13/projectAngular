@@ -1,10 +1,11 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {ActivatedRoute} from '@angular/router';
+import {Subscription} from 'rxjs';
+import {map} from 'rxjs/operators';
+
 import {CommentPost} from '../../shared/interfaces';
-import {pipe, Subscription} from 'rxjs';
 import {CommentsService} from '../../shared/comments.service';
-import {map} from "rxjs/operators";
 
 @Component({
   selector: 'app-comments-page',
@@ -59,15 +60,12 @@ export class CommentsPageComponent implements OnInit, OnDestroy {
       return false;
     }
     this.submitted = true;
-
     const comment: CommentPost = {
       id: this.id,
       name: this.form.value.name,
       text: this.form.value.text,
       date: new Date(),
     };
-
-    console.log(comment);
 
     this.createSubscription = this.commentsService.create(comment).subscribe(() => {
       this.submitted = false;
@@ -78,15 +76,12 @@ export class CommentsPageComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-
     if(this.createSubscription) {
       this.createSubscription.unsubscribe();
     }
-
     if(this.getSubscription) {
       this.getSubscription.unsubscribe();
     }
-
   }
 
 }
