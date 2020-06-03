@@ -1,15 +1,32 @@
 <div class="row">
 
-  <nav class="navbar main col-md-12">
+  <div>
+    <a ><img src="../../../../assets/Web%20development.png" alt="author"></a>
+  </div>
 
-    <h1>МОЙ БЛОГ</h1>
+  <h1 class="site-title col-md-12">
+    <span>Михаил Карамзин</span>
+  </h1>
+  <span class="site-title col-md-12">Крылатое выражение</span>
 
-    <button
-      class="btn btn-success"
-      (click)="connectAd()"
-    >админка</button>
+  <ul class="nav main justify-content-center">
+    <li class="nav-item">
+      <a
+        class="nav-link active"
+        [routerLink]="['/']"
+      >Главная</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" >Обо мне</a>
+    </li>
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        (click)="connectAd()"
+      >Админка</a>
+    </li>
+  </ul>
 
-  </nav>
 
   <div class="container">
     <router-outlet></router-outlet>

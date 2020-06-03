@@ -4,17 +4,31 @@
 @import "~quill/dist/quill.core.css"
 @import "~quill/dist/quill.snow.css"
 
+$font-global: 'Roboto', sans-serif
+
+$main-color: rgb(204, 204, 204)
+$primary-color: #708fa7
+$dark-color: #333333
+$light-color: #f4f4f4
+$danger-color: #dc3545
+$success-color: #28a745
+$link-color: #666
+$black-color: #111
+$white-color: #fff
+$badge-color: #ccc
+$form-color: #888
+
 *
   box-sizing: border-box
   margin: 0
   padding: 0
 
 body
-  font-family: 'Roboto', sans-serif
+  font-family: $font-global
   font-size: 1rem
   line-height: 1.6
-  background-color: rgb(224, 250, 197)
-  color: #333
+  background-color: $badge-color
+  color: $dark-color
 
 ul
   list-style: none
@@ -27,6 +41,211 @@ img
   margin: auto
   overflow: hidden
   padding: 0 2rem
+
+a
+  color: $link-color
+  cursor: pointer
+  text-decoration: none
+  &:hover
+    text-decoration: none
+
+.text-primary
+  color: $primary-color
+
+.text-dark
+  color: $dark-color
+
+.text-success
+  color: $success-color
+
+.text-danger
+  color: $danger-color
+
+.text-center
+  text-align: center
+
+.card
+  padding: 1rem
+  border: #ccc 1px dotted
+  margin: 0.7rem 0
+  &-header
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &-content
+    margin-bottom: .5rem
+
+.list
+  margin: 0.5rem 0
+  li
+    padding-bottom: 0.3rem
+
+.btn
+  display: inline-block
+  background: $light-color
+  color: $dark-color
+  padding: 0.4rem 1.3rem
+  font-size: 1rem
+  border: none
+  cursor: pointer
+  margin-right: 0.5rem
+  transition: opacity 0.2s ease-in
+  outline: none
+  &:disabled
+    cursor: not-allowed
+    background: $light-color
+    color: $black-color
+
+.btn-link
+  background: none
+  padding: 0
+  margin: 0
+
+.btn-block
+  display: block
+  width: 100%
+
+.btn-sm
+  font-size: 0.8rem
+  padding: 0.3rem 1rem
+  margin-right: 0.2rem
+
+.badge
+  display: inline-block
+  font-size: 0.8rem
+  padding: 0.2rem 0.7rem
+  text-align: center
+  margin: 0.3rem
+  background: $light-color
+  color: $dark-color
+  border-radius: 5px
+
+.alert
+  padding: 0.7rem
+  margin: 1rem 0
+  opacity: 0.9
+  background: $light-color
+  color: $dark-color
+
+.btn-primary,
+.bg-primary,
+.badge-primary,
+.alert-primary
+  background: $primary-color
+  color: $white-color
+
+.btn-light,
+.bg-light,
+.badge-light,
+.alert-light
+  background: $light-color
+  color: $dark-color
+
+.btn-dark,
+.bg-dark,
+.badge-dark,
+.alert-dark
+  background: $dark-color
+  color: $white-color
+
+.btn-danger,
+.bg-danger,
+.badge-danger,
+.alert-danger
+  background: $danger-color
+  color: $white-color
+
+.btn-success,
+.bg-success,
+.badge-success,
+.alert-success
+  background: $success-color
+  color: $white-color
+
+.btn-white,
+.bg-white,
+.badge-white,
+.alert-white
+  background: $white-color
+  color: $dark-color
+  border: $badge-color solid 1px
+
+.btn:hover
+  opacity: 0.8
+
+
+.bg-light,
+.badge-light
+  border: $badge-color solid 1px
+
+.round-img
+  border-radius: 50%
+
+.form-control
+  display: block
+  color: $form-color
+  margin-bottom: .8rem
+  &.invalid
+    color: $primary-color
+    input
+      border-color: $primary-color
+  .validation
+    color: $primary-color
+
+input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='date'],
+select,
+textarea
+  display: block
+  width: 100%
+  padding: 0.4rem
+  font-size: 1.2rem
+  border: 1px solid $badge-color
+
+input[type='submit'],
+button
+  font: inherit
+
+table
+  width: 100%
+  border-collapse: collapse
+
+table th,
+table td
+  padding: 1rem
+  text-align: left
+
+table th
+  background: $light-color
+
+.nav
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 0.7rem 2rem
+  z-index: 1
+  width: 100%
+  opacity: 0.9
+  margin-bottom: 1rem
+  &.main
+    justify-content: center
+    border-top: 10px solid $dark-color
+    border-bottom: 2px solid $dark-color
+  ul
+    display: flex
+  li.active a
+    color: $dark-color
+    font-weight: bold
+    cursor: default
+  a
+    color: $dark-color
+    padding: 0.45rem
+    margin: 0 0.25rem
+    &:hover
+      color: $primary-color
+
 
 
 
