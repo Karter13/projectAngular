@@ -15,6 +15,7 @@ import {SharedModule} from './shared/shared.module';
 import {AuthInterceptor} from './shared/auth.interceptor';
 import {PostPageComponent} from './post-page/post-page.component';
 import { CommentsPageComponent } from './post-page/comments-page/comments-page.component';
+import {ErrorPageComponent} from "./shared/components/error-page/error-page.component";
 
 registerLocaleData(ruLocaleData, 'ru');
 
@@ -25,7 +26,8 @@ registerLocaleData(ruLocaleData, 'ru');
     HomePageComponent,
     PostPageComponent,
     PostComponent,
-    CommentsPageComponent
+    CommentsPageComponent,
+    ErrorPageComponent
   ],
   imports: [
     BrowserModule,
