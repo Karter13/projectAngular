@@ -4,6 +4,7 @@ import {Routes, RouterModule, PreloadAllModules} from '@angular/router';
 import {MainLayoutComponent} from './shared/components/main-layout/main-layout.component';
 import {HomePageComponent} from './home-page/home-page.component';
 import {PostPageComponent} from './post-page/post-page.component';
+import {ErrorPageComponent} from './shared/components/error-page/error-page.component';
 
 const routes: Routes = [
   {
@@ -12,12 +13,14 @@ const routes: Routes = [
     children: [
       {path: '', redirectTo: '/', pathMatch: 'full'},
       {path: '', component: HomePageComponent},
-      {path: 'post/:id', component: PostPageComponent}
+      {path: 'post/:id', component: PostPageComponent},
     ]
   },
   {
     path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)
-  }
+  },
+  {path: 'error', component: ErrorPageComponent},
+  {path: '**', redirectTo: '/error'},
 ];
 
 @NgModule({
