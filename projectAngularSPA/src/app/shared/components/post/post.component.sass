@@ -1,8 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap')
+
+$primary-color: #708fa7
+$badge-color: #ccc
+$black-color: #111
+
+$font-main: 'Prata', serif
+
 .card
+  background-color: $badge-color
   margin-bottom: 10px
+  font-family: $font-main
   &-header
     display: flex
-    justify-content: space-between
+    justify-content: center
+    &_title
+      text-align: center
+      line-height: 1.2em
+      font-size: 2.8em
+      font-weight: bold
+      margin-bottom: 5px
+      font-family: $font-main
+      width: 100%
+      &-link
+        color: $black-color
+    &_data-author
+      font-weight: bold
+      margin-right: 15px
+  &-body
+    text-align: justify
+    text-indent: 1em
+  &-button a
+    font-weight: bold
+    &:hover
+      color: $black-color
 
 
 

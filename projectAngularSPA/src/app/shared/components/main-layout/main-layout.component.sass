@@ -1,3 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap')
+
+$font-via: 'Viaoda Libre', cursive
+$font-caveat: 'Caveat', cursive
+
 .site
-  &-title
-    text-align: center
+  &-banner
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    width: 100%
+    margin: 1rem 0
+    &_picture
+      width: 40%
+      text-align: center
+      &-img
+        width: 70%
+        border-radius: 50%
+        text-align: center
+    &_text
+      width: 55%
+      &-title
+        width: 100%
+        margin-bottom: 50px
+        font-family: $font-via
+        font-weight: 600
+        font-size: 4.4em
+      &-dictum
+        margin-left: -20px
+        font-family: $font-caveat
+        font-size: 1.5em
+
+
+
+
