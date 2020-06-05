@@ -1,10 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css?family=Roboto')
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap')
 
 @import "~quill/dist/quill.core.css"
 @import "~quill/dist/quill.snow.css"
 
-$font-global: 'Roboto', sans-serif
+$font-robot: 'Roboto', sans-serif
+$font-prat: 'Prata', serif
 
 $main-color: rgb(204, 204, 204)
 $primary-color: #708fa7
@@ -24,7 +26,7 @@ $form-color: #888
   padding: 0
 
 body
-  font-family: $font-global
+  font-family: $font-robot
   font-size: 1rem
   line-height: 1.6
   background-color: $badge-color
@@ -225,6 +227,7 @@ table th
   justify-content: space-between
   align-items: center
   padding: 0.7rem 2rem
+  font-family: $font-prat
   z-index: 1
   width: 100%
   opacity: 0.9
