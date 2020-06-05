@@ -1,12 +1,34 @@
-.header
-  display: flex
-  justify-content: space-between
-  align-items: center
-h1
-  margin-bottom: 1rem
-.info
-  strong
-    margin-right: 1rem
-.content
-  text-align: justify
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap')
+
+$primary-color: #708fa7
+$badge-color: #ccc
+$black-color: #111
+
+$font-main: 'Prata', serif
+
+.post
+  margin-bottom: 40px
+  &-header
+    display: flex
+    justify-content: center
+    align-items: center
+    margin: 20px 0
+    &_title
+      text-align: center
+      line-height: 1.2em
+      font-size: 2.8em
+      font-weight: bold
+      margin-bottom: 5px
+      font-family: $font-main
+      width: 100%
+    &_info
+      &-author
+       margin-right: 1rem
+  &-content
+    width: 85%
+    margin: 0 auto
+.comments
+  width: 70%
+  margin: 0 auto
+  font-family: $font-main
 
