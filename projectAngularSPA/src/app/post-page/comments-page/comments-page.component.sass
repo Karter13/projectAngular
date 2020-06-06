@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap')
+
+$primary-color: #708fa7
+$badge-color: #c4c8cc
+$black-color: #111
+$light-color: #f4f4f4
+$danger-color: #dc3545
+$white-color: #fff
+
+$font-main: 'Prata', serif
+
+.comments
+  &-form
+    margin-bottom: 30px
+    &_title
+      //display: inline-block
+      font-family: $font-main
+      font-weight: bold
+  &-content
+    font-family: $font-main
+    &_title
+      &-text
+        //display: inline-block
+        font-family: $font-main
+        font-weight: bold
+    &_body
+      border-bottom: 1px solid $primary-color
+      margin-top: 20px
+      margin-bottom: 25px
+      &-date
+        font-size: 10px
+      &-text
+        font-size: 14px
+        text-align: justify
+        text-indent: 1em
+
+.form
+  &-control
+    font-size: 14px
+    background-color: $light-color
+    margin-bottom: 0
+
+textarea
+  background-color: $light-color
+  width: 100%
+  font-size: 14px
+small
+  color: $danger-color
+  font-size: 12px
+.btn
+  background: $primary-color
+  color: $white-color
+  &:hover
+    color: $black-color
+    font-family: $font-main
+
+
+
