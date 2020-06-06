@@ -1,7 +1,7 @@
 <div class="row">
   <div class="site-banner">
     <div class="site-banner_picture">
-      <a ><img src="../../../../assets/my-foto1.jpg" alt="author" class="site-banner_picture-img img-thumbnail" ></a>
+      <a (click)="connectAbout()"><img src="../../../../assets/my-foto1.jpg" alt="author" class="site-banner_picture-img img-thumbnail" ></a>
     </div>
     <div class="site-banner_text">
       <h1 class="site-banner_text-title col-md-12">
@@ -18,7 +18,10 @@
       >Главная</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" >Обо мне</a>
+      <a
+        class="nav-link"
+        (click)="connectAbout()"
+      >Обо мне</a>
     </li>
     <li class="nav-item">
       <a
