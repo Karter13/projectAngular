@@ -16,6 +16,8 @@ import {AuthInterceptor} from './shared/auth.interceptor';
 import {PostPageComponent} from './post-page/post-page.component';
 import { CommentsPageComponent } from './post-page/comments-page/comments-page.component';
 import {ErrorPageComponent} from "./shared/components/error-page/error-page.component";
+import {DotPipe} from "./shared/dot.pipe";
+import { AboutPageComponent } from './home-page/about-page/about-page.component';
 
 registerLocaleData(ruLocaleData, 'ru');
 
@@ -27,7 +29,9 @@ registerLocaleData(ruLocaleData, 'ru');
     PostPageComponent,
     PostComponent,
     CommentsPageComponent,
-    ErrorPageComponent
+    ErrorPageComponent,
+    DotPipe,
+    AboutPageComponent
   ],
   imports: [
     BrowserModule,

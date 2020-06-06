@@ -1,2 +1,16 @@
-<h1>Страници с таким адресом не сущестует!</h1>
-<button [routerLink]="['/']">На главную</button>
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-body">
+      <p>Страницы с таким адресом не существует!!!</p>
+    </div>
+
+      <button
+        type="button"
+        class="btn btn-secondary"
+        data-dismiss="modal"
+        [routerLink]="['/']"
+      >Вернуться на главную страницу</button>
+
+  </div>
+</div>
+

@@ -16,4 +16,8 @@ export class MainLayoutComponent implements OnInit {
   connectAd() {
     this.router.navigate(['/admin', 'dashboard']);
   }
+
+  connectAbout() {
+    this.router.navigate(['/about']);
+  }
 }

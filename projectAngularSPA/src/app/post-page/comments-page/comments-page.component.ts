@@ -42,8 +42,8 @@ export class CommentsPageComponent implements OnInit, OnDestroy {
     });
 
     this.form = new FormGroup({
-      name: new FormControl(null, [Validators.required]),
-      text: new FormControl(null, [Validators.required]),
+      name: new FormControl(null, [Validators.required, Validators.minLength(2)]),
+      text: new FormControl(null, [Validators.required, Validators.minLength(3)]),
     })
   }
 
@@ -56,7 +56,7 @@ export class CommentsPageComponent implements OnInit, OnDestroy {
   }
 
   submit() {
-    if (this.form.invalid) {
+    if (this.form.invalid ) {
       return false;
     }
     this.submitted = true;
