@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {Observable} from 'rxjs';
 
 import {PostsService} from '../shared/posts.service';
 import {Post} from '../shared/interfaces';
+import {map} from "rxjs/operators";
 
 @Component({
   selector: 'app-home-page',
@@ -11,12 +11,20 @@ import {Post} from '../shared/interfaces';
 })
 export class HomePageComponent implements OnInit {
 
-  posts$: Observable<Post[]>;
+  posts: Post[];
 
   constructor(private postsService: PostsService) { }
 
   ngOnInit(): void {
-    this.posts$ = this.postsService.getAll();
+    this.postsService.getAll()
+      .pipe(
+        map((posts: Post[]) => {
+          return posts.reverse();
+        })
+      )
+      .subscribe(posts => {
+        this.posts = posts;
+      })
   }
 
 }

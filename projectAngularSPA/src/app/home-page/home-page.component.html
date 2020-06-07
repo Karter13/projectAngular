@@ -1,6 +1,6 @@
 <div
   class="posts"
-  *ngIf="posts$ | async as posts; else loading"
+  *ngIf="posts; else loading"
 >
   <app-post
     *ngFor="let post of posts"
