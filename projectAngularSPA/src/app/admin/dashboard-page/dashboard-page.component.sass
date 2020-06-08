@@ -1,19 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto')
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap')
+
+
+$font-robot: 'Roboto', sans-serif
+$font-main: 'Prata', serif
+
+$badge-color: #ccc
+$th-color: #6c757d
+$white-color: #fff
+
 table
   width: 100%
   border-collapse: collapse
   margin-top: 20px
-table th,
-table td
-  padding: 1rem
-  text-align: left
 table th
-  background: #f4f4f4
+  font-family: $font-robot
+  font-weight: normal
+  background-color: $th-color
+  color: $white-color
 input
   display: block
   width: 100%
   padding: 0.4rem
   font-size: 1.2rem
-  border: 2px solid #ccc
+  border: 2px solid $badge-color
 button
   margin-right: 5px
 
