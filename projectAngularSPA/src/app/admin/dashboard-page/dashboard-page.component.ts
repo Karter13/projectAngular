@@ -4,6 +4,7 @@ import {Subscription} from 'rxjs';
 import {PostsService} from '../../shared/posts.service';
 import {Post} from '../../shared/interfaces';
 import {AlertService} from '../shared/services/alert.service';
+import {map} from "rxjs/operators";
 
 @Component({
   selector: 'app-dashboard-page',
@@ -23,7 +24,13 @@ export class DashboardPageComponent implements OnInit, OnDestroy {
     ) { }
 
   ngOnInit(): void {
-   this.postsSubscription = this.postsService.getAll().subscribe(posts => {
+   this.postsSubscription = this.postsService.getAll()
+     .pipe(
+       map(posts => {
+         return posts.reverse();
+       })
+     )
+     .subscribe(posts => {
       this.posts = posts;
     });
   }
