@@ -18,6 +18,7 @@ import { CommentsPageComponent } from './post-page/comments-page/comments-page.c
 import {ErrorPageComponent} from "./shared/components/error-page/error-page.component";
 import {DotPipe} from "./shared/dot.pipe";
 import { AboutPageComponent } from './home-page/about-page/about-page.component';
+import {GoTopDirective} from './shared/go-top.directive';
 
 registerLocaleData(ruLocaleData, 'ru');
 
@@ -31,7 +32,8 @@ registerLocaleData(ruLocaleData, 'ru');
     CommentsPageComponent,
     ErrorPageComponent,
     DotPipe,
-    AboutPageComponent
+    AboutPageComponent,
+    GoTopDirective,
   ],
   imports: [
     BrowserModule,

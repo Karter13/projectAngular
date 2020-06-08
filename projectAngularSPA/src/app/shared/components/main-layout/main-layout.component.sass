@@ -36,6 +36,7 @@ $black-color: #111
 
 .btn
   &-top
+    opacity: 0
     text-align: center
     border-radius: 10px
     font-size: large
@@ -46,4 +47,12 @@ $black-color: #111
     width: 5%
 
 
+.show
+  opacity: 1
+  pointer-events: auto
+  visibility: visible
+  -webkit-transition: opacity 1.6s
+  -o-transition: opacity 1.6s
+  transition: opacity 1.6s
+  cursor: pointer
 
