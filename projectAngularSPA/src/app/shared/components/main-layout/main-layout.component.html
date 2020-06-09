@@ -23,12 +23,36 @@
         (click)="connectAbout()"
       >Обо мне</a>
     </li>
-    <li class="nav-item">
+
+    <li
+      class="nav-item"
+      *ngIf="!authenticated"
+    >
+      <a
+        class="nav-link"
+        (click)="connectAd()"
+      >Авторизация</a>
+    </li>
+
+    <li
+      class="nav-item"
+      *ngIf="authenticated"
+    >
       <a
         class="nav-link"
         (click)="connectAd()"
       >Админка</a>
     </li>
+    <li
+      class="nav-item"
+      *ngIf="authenticated"
+    >
+    <a
+      class="nav-link"
+      (click)="logOut($event)"
+    >Выйти</a>
+  </li>
+
   </ul>
 
   <div class="container">

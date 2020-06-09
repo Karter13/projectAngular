@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
+import {AuthService} from "../../../admin/shared/services/auth.service";
 
 @Component({
   selector: 'app-main-layout',
@@ -8,9 +9,19 @@ import {Router} from '@angular/router';
 })
 export class MainLayoutComponent implements OnInit {
 
-  constructor(public router: Router) { }
+  authenticated = false;
+
+  constructor(
+    public router: Router,
+    public authService: AuthService
+    ) { }
 
   ngOnInit(): void {
+    if (this.authService.isAuthenticated()) {
+      this.authenticated = true;
+    } else {
+      this.authenticated = false;
+    }
   }
 
   connectAd() {
@@ -20,4 +31,11 @@ export class MainLayoutComponent implements OnInit {
   connectAbout() {
     this.router.navigate(['/about']);
   }
+
+  logOut(event: Event) {
+    event.preventDefault();
+    this.authService.logout();
+    this.router.navigate(['/admin', 'login'])
+  }
+
 }
