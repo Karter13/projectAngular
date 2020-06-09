@@ -17,10 +17,10 @@
         <tr *ngFor="let post of posts | searchPosts: searchString; let i = index">
           <td>{{ i + 1 }}</td>
           <td>{{ post.author }}</td>
-          <td>{{ post.title }}</td>
+          <td>{{ post.title | dotTwo: 20}}</td>
           <td>{{ post.date | date: 'medium':null:'ru' }}</td>
           <td>
-            <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+            <div class="btn-group btn-group-sm" style="width: 100%" aria-label="Basic example">
               <button
                 type="button"
                 class="btn btn-secondary"
@@ -31,6 +31,10 @@
                 class="btn btn-secondary"
                 (click)="remove(post.id)"
               >Удалить</button>
+              <button
+                type="button"
+                class="btn btn-secondary"
+              >Коменты</button>
             </div>
           </td>
         </tr>
