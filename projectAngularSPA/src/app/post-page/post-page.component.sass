@@ -16,8 +16,7 @@ $font-main: 'Prata', serif
     &_title
       text-align: center
       line-height: 1.2em
-      font-size: 2.8em
-      font-weight: bold
+      font-size: 2.5em
       margin-bottom: 5px
       font-family: $font-main
       width: 100%
@@ -32,3 +31,45 @@ $font-main: 'Prata', serif
   margin: 0 auto
   font-family: $font-main
 
+@media (max-width: 768px)
+  .post
+    &-header
+      &_title
+        margin-bottom: 5px
+        font-family: $font-main
+        width: 80%
+      &_info
+        &-author
+          margin-right: 1rem
+@media (max-width: 567px)
+  .post
+    &-header
+      &_title
+        font-size: 2em
+@media (max-width: 500px)
+  .post
+    &-header
+      margin-bottom: 5px
+      margin-top: 0
+      &_title
+        line-height: 1em
+        font-size: 1.5em
+      &_info
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        &-author
+          margin: 0
+          text-align: center
+    &-content
+      width: 95%
+      margin: 0 auto
+@media (max-width: 320px)
+  .post
+    &-header
+      &_info
+        &-date
+          display: none
+  .comments
+    width: 90%

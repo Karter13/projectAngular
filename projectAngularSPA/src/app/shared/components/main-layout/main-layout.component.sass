@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap')
 @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap')
+@import url('https://fonts.googleapis.com/css?family=Roboto')
 
+
+$font-robot: 'Roboto', sans-serif
 $font-via: 'Viaoda Libre', cursive
 $font-caveat: 'Caveat', cursive
 
@@ -32,7 +35,11 @@ $black-color: #111
       &-dictum
         margin-left: -20px
         font-family: $font-caveat
-        font-size: 1.5em
+        font-size: 1.6em
+  &-blogs
+    padding: 0
+    //min-height: 800px
+    margin-bottom: 40px
 
 .btn
   &-top
@@ -46,7 +53,6 @@ $black-color: #111
     right: 50px
     width: 5%
 
-
 .show
   opacity: 1
   pointer-events: auto
@@ -55,4 +61,61 @@ $black-color: #111
   -o-transition: opacity 1.6s
   transition: opacity 1.6s
   cursor: pointer
+
+.site
+  &-footer
+    width: 100%
+    text-align: center
+    margin-bottom: 20px
+    &_info
+      font-family: $font-robot
+
+
+@media (max-width: 768px)
+  .site
+    &-banner
+      &_picture
+        width: 50%
+        text-align: center
+        &-img
+          width: 75%
+      &_text
+        &-title
+          margin-bottom: 40px
+          font-size: 4em
+@media (max-width: 567px)
+  .site
+    &-banner
+      &_picture
+        &-img
+          width: 80%
+      &_text
+        &-title
+          padding: 0
+          font-size: 3em
+          margin-bottom: 20px
+        &-dictum
+          font-size: 1.3em
+  .btn
+    &-top
+      bottom: 20px
+      right: 20px
+      width: 5%
+@media (max-width: 500px)
+  .site
+    &-banner
+      &_picture
+        width: 50%
+        &-img
+          width: 80%
+      &_text
+        &-title
+          padding: 0
+          font-size: 2.5em
+          margin-bottom: 0
+        &-dictum
+          display: none
+
+
+
 

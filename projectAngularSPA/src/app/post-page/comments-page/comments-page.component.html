@@ -28,10 +28,12 @@
              class="form-group" >
           <label for="text">Коментарий*</label>
           <textarea
+            rows="5"
             formControlName="text"
             id="text"
             placeholder="Введите коментарий..."
           ></textarea>
+
           <div *ngIf="text.touched && text.invalid"
                class="validation">
             <small *ngIf="text.errors.required">
@@ -45,7 +47,6 @@
 
         </div>
 
-
         <button type="submit"
                 [disabled]="form.invalid || submitted"
                 class="btn"
@@ -53,7 +54,6 @@
 
       </form>
   </div>
-
 
   <div class="comments-content col-sm-12">
 

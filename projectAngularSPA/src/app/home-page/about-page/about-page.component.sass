@@ -42,3 +42,53 @@ $black-color: #111
         line-height: normal
         text-align: justify
         text-indent: 1em
+
+
+@media (max-width: 768px)
+  .about
+    &-title
+      margin-top: 20px
+      margin-bottom: 30px
+      font-size: 3em
+    &-img
+      &_initials
+        font-size: 1.3em
+    &-body
+      &_text
+        &-paragraph
+          font-size: 1.4em
+
+@media (max-width: 567px)
+  .about
+    &-title
+      margin-top: 15px
+      margin-bottom: 25px
+      font-size: 2.5em
+    &-img
+      &_photo
+        width: 70%
+      &_initials
+        font-size: 1.3em
+    &-body
+      width: 80%
+      &_text
+        &-paragraph
+          font-size: 1.3em
+
+@media (max-width: 500px)
+  .about
+    &-title
+      margin-top: 0
+      margin-bottom: 25px
+      font-size: 2em
+    &-img
+      &_photo
+        width: 80%
+      &_initials
+        display: none
+    &-body
+      width: 90%
+      &_text
+        &-paragraph
+          font-size: 1.2em
+
