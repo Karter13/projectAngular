@@ -16,7 +16,8 @@
   </div>
 
   <ng-template #commentsAut>
-    <p class="text-center">Коментарии отсутствуют...</p>
+    <p *ngIf="!submitted" class="text-center">Коментарии отсутствуют...</p>
+    <p *ngIf="submitted" class="text-center">Загрузка...</p>
   </ng-template>
 
 </div>

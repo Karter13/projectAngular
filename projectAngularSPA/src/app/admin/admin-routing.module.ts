@@ -8,11 +8,13 @@ import {CreatePageComponent} from './create-page/create-page.component';
 import {EditPageComponent} from './edit-page/edit-page.component';
 import {AuthGuard} from './shared/services/auth.guard';
 import {CommentsPageComponent} from "./comments-page/comments-page.component";
+import {CommentsResolver} from "./shared/resolvers/comments.resolver";
 
 const routes: Routes = [
   {
     path: '',
     component: AdminLayoutComponent,
+    resolve: {comments: CommentsResolver},
     children: [
       {path: '', redirectTo: '/admin/login', pathMatch: 'full'},
       {path: 'login', component: LoginPageComponent},

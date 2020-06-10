@@ -4,7 +4,7 @@ import {CommentsService} from '../../shared/comments.service';
 import {CommentPost} from '../../shared/interfaces';
 import {map} from 'rxjs/operators';
 import {Subscription} from 'rxjs';
-import {AlertService} from "../shared/services/alert.service";
+import {AlertService} from '../shared/services/alert.service';
 
 @Component({
   selector: 'app-comments-page',
@@ -16,6 +16,7 @@ export class CommentsPageComponent implements OnInit, OnDestroy {
   id: string;
   comments: CommentPost[] = [];
   commentsSubscription: Subscription;
+  submitted = false;
   error: any = null;
 
 
@@ -26,6 +27,7 @@ export class CommentsPageComponent implements OnInit, OnDestroy {
   ) { }
 
   ngOnInit(): void {
+    this.submitted = true;
     this.error = null;
     this.route.params
       .subscribe(params => {
@@ -40,11 +42,12 @@ export class CommentsPageComponent implements OnInit, OnDestroy {
       )
       .subscribe(comments => {
         this.comments = comments.filter(comment => comment.id === this.id);
-        // console.log(this.comments);
+          this.submitted = false;
       },
         (error) => {
           this.error = error;
-        });
+      });
+
   }
 
   deleteComment(idResp: any) {
