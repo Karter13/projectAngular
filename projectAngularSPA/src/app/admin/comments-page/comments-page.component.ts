@@ -1,9 +1,10 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-import {CommentsService} from '../../shared/comments.service';
-import {CommentPost} from '../../shared/interfaces';
 import {map} from 'rxjs/operators';
 import {Subscription} from 'rxjs';
+
+import {CommentsService} from '../../shared/comments.service';
+import {CommentPost} from '../../shared/interfaces';
 import {AlertService} from '../shared/services/alert.service';
 
 @Component({

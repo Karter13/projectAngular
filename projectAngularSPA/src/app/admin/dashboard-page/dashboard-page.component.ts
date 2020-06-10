@@ -1,11 +1,12 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Subscription} from 'rxjs';
+import {map} from 'rxjs/operators';
+import {Router} from '@angular/router';
 
 import {PostsService} from '../../shared/posts.service';
 import { Post} from '../../shared/interfaces';
 import {AlertService} from '../shared/services/alert.service';
-import {map} from "rxjs/operators";
-import {Router} from "@angular/router";
+
 
 @Component({
   selector: 'app-dashboard-page',

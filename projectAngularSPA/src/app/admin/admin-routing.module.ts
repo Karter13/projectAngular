@@ -7,8 +7,8 @@ import {DashboardPageComponent} from './dashboard-page/dashboard-page.component'
 import {CreatePageComponent} from './create-page/create-page.component';
 import {EditPageComponent} from './edit-page/edit-page.component';
 import {AuthGuard} from './shared/services/auth.guard';
-import {CommentsPageComponent} from "./comments-page/comments-page.component";
-import {CommentsResolver} from "./shared/resolvers/comments.resolver";
+import {CommentsPageComponent} from './comments-page/comments-page.component';
+import {CommentsResolver} from './shared/resolvers/comments.resolver';
 
 const routes: Routes = [
   {

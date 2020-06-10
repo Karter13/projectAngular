@@ -1,9 +1,10 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
+import {map} from 'rxjs/operators';
+import {Subscription} from 'rxjs';
 
 import {PostsService} from '../shared/posts.service';
 import {Post} from '../shared/interfaces';
-import {map} from "rxjs/operators";
-import {Subscription} from "rxjs";
+
 
 @Component({
   selector: 'app-home-page',
