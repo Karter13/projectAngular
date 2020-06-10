@@ -1,10 +1,11 @@
 import {Injectable} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
 
 import {FbCreateResponse, Post} from './interfaces';
 import {environment} from '../../environments/environment';
+import {loader} from './loader/loader.decorator';
 
 
 @Injectable({
@@ -26,8 +27,9 @@ export class PostsService {
       );
   }
 
-  getAll(): Observable<Post[]> {
-    return this.http.get(`${environment.fbDbUrl}/posts.json`)
+  @loader()
+  getAll(headers?: HttpHeaders): Observable<Post[]> {
+    return this.http.get(`${environment.fbDbUrl}/posts.json`, {headers})
       .pipe(
         map((response: {[key: string]: any}) => {
           return Object
@@ -41,8 +43,9 @@ export class PostsService {
       )
   }
 
-  getById(id: string): Observable<Post> {
-    return this.http.get<Post>(`${environment.fbDbUrl}/posts/${id}.json`)
+  @loader()
+  getById(id: string, headers?: HttpHeaders): Observable<Post> {
+    return this.http.get<Post>(`${environment.fbDbUrl}/posts/${id}.json`, {headers})
       .pipe(
         map((post: Post) => {
           return {
