@@ -15,10 +15,12 @@ import {SharedModule} from './shared/shared.module';
 import {AuthInterceptor} from './shared/auth.interceptor';
 import {PostPageComponent} from './post-page/post-page.component';
 import { CommentsPageComponent } from './post-page/comments-page/comments-page.component';
-import {ErrorPageComponent} from "./shared/components/error-page/error-page.component";
+import {ErrorPageComponent} from './shared/components/error-page/error-page.component';
 import { AboutPageComponent } from './home-page/about-page/about-page.component';
 import {GoTopDirective} from './shared/go-top.directive';
-import {DotPipe} from "./shared/dot.pipe";
+import {DotPipe} from './shared/dot.pipe';
+import {LoaderComponent} from './shared/loader/loader.component';
+import {LoaderInterceptor} from './shared/loader/loader.interceptor';
 
 registerLocaleData(ruLocaleData, 'ru');
 
@@ -34,6 +36,7 @@ registerLocaleData(ruLocaleData, 'ru');
     DotPipe,
     AboutPageComponent,
     GoTopDirective,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +46,8 @@ registerLocaleData(ruLocaleData, 'ru');
     ReactiveFormsModule,
   ],
   providers: [
-    {provide: HTTP_INTERCEPTORS, multi: true, useClass: AuthInterceptor},
+    { provide: HTTP_INTERCEPTORS, multi: true, useClass: AuthInterceptor },
+    { provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]
 })

@@ -1,0 +1,25 @@
+<div class="comments-content col-sm-12">
+
+  <div class="comments-content_title">
+    <h3 class="comments-content_title-text shadow-lg">Коментарии</h3>
+  </div>
+
+  <div *ngIf="comments.length; else commentsAut">
+    <div class="comments-content_body"  *ngFor="let comment of comments">
+      <strong class="comments-content_body-title">{{comment.name}}</strong>
+      <p class="comments-content_body-date">{{comment.date | date: 'd MMMM yyy,  HH:mm':null:'ru' }}</p>
+      <p class="comments-content_body-text">{{comment.text}}</p>
+      <button
+        type="button"
+        class="btn btn-secondary comments-content_body-button"
+        (click)="deleteComment(comment.idResp)"
+      >Удалить коммент</button>
+    </div>
+  </div>
+
+  <ng-template #commentsAut>
+    <p *ngIf="!submitted" class="text-center">Коментарии отсутствуют...</p>
+    <p *ngIf="submitted" class="text-center">Загрузка...</p>
+  </ng-template>
+
+</div>

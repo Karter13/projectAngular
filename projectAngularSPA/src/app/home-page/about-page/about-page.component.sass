@@ -36,13 +36,22 @@ $black-color: #111
     font-family: $font-main
     &_text
       margin-bottom: 30px
+      &-title
+        font-family: $font-via
+        font-weight: bold
+        line-height: 1em
+        font-size: 3em
       &-paragraph
         color: $black-color
         font-size: 1.5em
         line-height: normal
         text-align: justify
-        text-indent: 1em
-
+        text-indent: 1.5em
+    &_img
+      display: flex
+      justify-content: center
+      &-social
+        width: 7%
 
 @media (max-width: 768px)
   .about
@@ -57,6 +66,9 @@ $black-color: #111
       &_text
         &-paragraph
           font-size: 1.4em
+        &-title
+          line-height: 1em
+          font-size: 2.5em
 
 @media (max-width: 567px)
   .about
@@ -74,6 +86,8 @@ $black-color: #111
       &_text
         &-paragraph
           font-size: 1.3em
+        &-title
+          font-size: 2em
 
 @media (max-width: 500px)
   .about
@@ -91,4 +105,5 @@ $black-color: #111
       &_text
         &-paragraph
           font-size: 1.2em
+
 

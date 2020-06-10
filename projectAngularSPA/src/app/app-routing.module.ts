@@ -5,7 +5,7 @@ import {MainLayoutComponent} from './shared/components/main-layout/main-layout.c
 import {HomePageComponent} from './home-page/home-page.component';
 import {PostPageComponent} from './post-page/post-page.component';
 import {ErrorPageComponent} from './shared/components/error-page/error-page.component';
-import {AboutPageComponent} from "./home-page/about-page/about-page.component";
+import {AboutPageComponent} from './home-page/about-page/about-page.component';
 
 const routes: Routes = [
   {
