@@ -15,8 +15,10 @@ import {CommentsService} from '../../shared/comments.service';
 export class CommentsPageComponent implements OnInit, OnDestroy {
   form: FormGroup;
   id: string;
+  idResp: string;
   comments: CommentPost[]= [];
   submitted = false;
+  error: any = null;
   createSubscription: Subscription;
   getSubscription: Subscription;
 
@@ -26,6 +28,7 @@ export class CommentsPageComponent implements OnInit, OnDestroy {
   ) { }
 
   ngOnInit(): void {
+    this.error = null;
     this.route.params
       .subscribe((params) => {
         this.id = params['id'];
@@ -39,7 +42,10 @@ export class CommentsPageComponent implements OnInit, OnDestroy {
       )
       .subscribe(comments => {
       this.comments = comments.filter(comment => comment.id === this.id);
-    });
+    },
+        error => {
+          this.error = error;
+        });
 
     this.form = new FormGroup({
       name: new FormControl(null, [Validators.required, Validators.minLength(2)]),
@@ -61,6 +67,7 @@ export class CommentsPageComponent implements OnInit, OnDestroy {
     }
     this.submitted = true;
     const comment: CommentPost = {
+      idResp: this.idResp,
       id: this.id,
       name: this.form.value.name,
       text: this.form.value.text,

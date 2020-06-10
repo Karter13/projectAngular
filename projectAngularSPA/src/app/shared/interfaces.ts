@@ -25,5 +25,6 @@ export interface CommentPost {
   id: string,
   name: string,
   text: string,
+  idResp: string;
   date: Date,
 }

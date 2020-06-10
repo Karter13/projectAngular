@@ -2,9 +2,10 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Subscription} from 'rxjs';
 
 import {PostsService} from '../../shared/posts.service';
-import {Post} from '../../shared/interfaces';
+import { Post} from '../../shared/interfaces';
 import {AlertService} from '../shared/services/alert.service';
 import {map} from "rxjs/operators";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-dashboard-page',
@@ -18,9 +19,11 @@ export class DashboardPageComponent implements OnInit, OnDestroy {
   removeSubscription: Subscription;
   searchString = '';
 
+
   constructor(
     private postsService: PostsService,
-    private alertService: AlertService
+    private alertService: AlertService,
+    private router: Router,
     ) { }
 
   ngOnInit(): void {
@@ -40,6 +43,10 @@ export class DashboardPageComponent implements OnInit, OnDestroy {
       this.posts = this.posts.filter(post => post.id !== id );
       this.alertService.warning('Пост удален!');
     })
+  }
+
+  showComments(id: string) {
+        this.router.navigate(['/admin', 'post', id, 'comments']);
   }
 
   ngOnDestroy(): void {
